@@ -16,6 +16,10 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#info">Info</a></li>
                 <li><a href="#interests">Interests</a></li>
+                <li id="weather-header" class="weather-brief">
+                    <!-- Weather Info will be injected here -->
+                    <span class="loading-dots">날씨 불러오는 중</span>
+                </li>
                 <li><button class="theme-toggle" id="theme-toggle" aria-label="다크 모드 전환">🌙</button></li>
             </ul>
         </nav>
@@ -23,12 +27,28 @@
 
     <main>
         <section id="hero">
+            <canvas id="hero-canvas"></canvas>
             <div class="hero-content">
                 <h1 class="fade-in-down">안녕하세요, <br><span class="highlight">허준표</span>입니다.</h1>
                 <p class="fade-in-down" style="animation-delay: 0.5s;">꿈을 향해 나아가는 아주대학교 학생</p>
-                <div class="scroll-indicator fade-in-up" style="animation-delay: 1s;">
+                <div class="weather-card fade-in-up" id="weather-detail" style="animation-delay: 0.8s;">
+                    <!-- Detailed weather card -->
+                </div>
+                <div class="scroll-indicator fade-in-up" style="animation-delay: 1.2s;">
                     <span>SCROLL DOWN</span>
                     <div class="mouse"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="fun-zone" class="hidden">
+            <div class="container">
+                <h2>AI Fortune Zone</h2>
+                <div class="fortune-card">
+                    <div class="fortune-content">
+                        <p id="fortune-text">오늘의 운세를 확인해보세요!</p>
+                        <button id="get-fortune" class="cta-button">운세 뽑기 🔮</button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -47,7 +67,7 @@
                         </div>
                         <div class="stat-item">
                             <span class="stat-label">Major</span>
-                            <span class="stat-value">경영인텔리전스학과</span>
+                            <span class="stat-value">경영인텔https://github.com/joonpyohuh/study3-2리전스학과</span>
                         </div>
                     </div>
                 </div>
@@ -160,6 +180,7 @@
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
