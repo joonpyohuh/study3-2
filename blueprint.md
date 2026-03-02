@@ -1,41 +1,31 @@
-
-# b-cube: Business Intelligence Club Website Blueprint
+# Project Blueprint: b-cube Website
 
 ## Overview
+b-cube는 아주대학교 경영인텔리전스학과 소학회로, 데이터 분석 및 비즈니스 인텔리전스 분야를 연구합니다. 이 프로젝트는 소학회의 정체성을 알리고 멤버 및 활동을 소개하는 웹사이트입니다.
 
-This document outlines the plan for creating a website for b-cube, a business intelligence club at Ajou University. The website will be a modern, single-page application built with HTML, CSS, and JavaScript, leveraging Web Components for modularity.
+## Implemented Features
+- **Responsive Design**: Mobile-friendly layout using modern CSS.
+- **Web Components**: Custom `<member-card>` element for consistent member profiles.
+- **Animations**: Fade-in and scroll-triggered animations for a dynamic feel.
+- **Modern CSS**: Uses CSS Variables, Flexbox, and Grid.
+- **Dark/Light Mode**: User-selectable theme with persistence via `localStorage`.
 
-## Project Outline
+## Detailed Design
+- **Colors**:
+  - Light Mode: Navy (`#003366`), Light Blue-Grey (`#f0f4f8`), Orange Accent (`#ff9900`).
+  - Dark Mode: Sky Blue (`#4da3ff`), Dark Grey (`#1a1a1a`), Gold Accent (`#ffad33`).
+- **Typography**: 'Noto Sans KR' for a clean, modern look.
+- **Components**:
+  - `header`: Sticky navigation with theme toggle.
+  - `hero`: Large introductory section with background image and call-to-action.
+  - `sections`: About, Activities, Members, Contact with intersection observer animations.
+  - `member-card`: Shadow DOM encapsulated profile cards.
 
-### Design and Features
-
-*   **Responsive Design:** The website will be fully responsive and accessible on both desktop and mobile devices.
-*   **Modern Aesthetics:** The design will be clean, modern, and visually appealing, incorporating a professional color scheme, typography, and layout.
-*   **Interactive Elements:** The site will feature interactive elements and animations to engage users.
-*   **Web Components:** We will use Web Components to create reusable UI elements, such as member profile cards.
-
-### Sections
-
-1.  **Header:** A sticky header with the club logo and navigation links.
-2.  **Hero Section:** A prominent hero section with a welcoming message and a call-to-action.
-3.  **About Us:** A section detailing the club's mission, vision, and history.
-4.  **Activities:** A showcase of the club's activities, such as projects, workshops, and study sessions.
-5.  **Members:** A section to introduce the club's members.
-6.  **Contact:** A contact form and information on how to join the club.
-7.  **Footer:** A footer with copyright information and links to social media.
-
-## Current Task: Enhance UI and Add Animations
-
-The current task is to enhance the website's visual appeal by adding animations, refining the design, and updating the member list.
-
-### Plan
-
-1.  **Update Member Names:** Change the names of the president and vice-president in `index.html`.
-2.  **Enhance CSS (`style.css`):**
-    *   Add a smooth scrolling behavior.
-    *   Introduce animations for the hero section and section titles.
-    *   Improve the visual hierarchy with better typography and spacing.
-    *   Add subtle hover effects and transitions for a more interactive feel.
-    *   Incorporate a subtle background texture for a premium look.
-3.  **Add JavaScript Interactivity (`main.js`):**
-    *   Implement a fade-in effect for sections as they are scrolled into the viewport.
+## Current Task: Dark/Light Mode Implementation
+1.  **CSS Variables**: Defined global variables in `:root` and overrides in `body.dark-mode`.
+2.  **Toggle UI**: Added a button in the navigation bar to switch between moon and sun icons.
+3.  **JavaScript Logic**:
+    - Toggle `dark-mode` class on the `body` element.
+    - Save/Load theme preference from `localStorage`.
+    - Update custom component styles to inherit theme variables.
+4.  **Verification**: Ensure all text, backgrounds, and cards transition smoothly.
