@@ -1,87 +1,29 @@
-class MemberCard extends HTMLElement {
-    constructor() {
-        super();
-
-        const shadow = this.attachShadow({ mode: 'open' });
-
-        const template = document.createElement('template');
-        template.innerHTML = `
-            <style>
-                :host {
-                    display: block;
-                }
-
-                .card {
-                    background-color: var(--card-bg, #ffffff);
-                    border-radius: 15px;
-                    box-shadow: 0 10px 30px var(--shadow-color);
-                    padding: 2rem;
-                    text-align: center;
-                    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-                }
-                .card:hover {
-                    transform: translateY(-10px);
-                    box-shadow: 0 15px 40px var(--shadow-color);
-                }
-                .card img {
-                    width: 120px;
-                    height: 120px;
-                    border-radius: 50%;
-                    object-fit: cover;
-                    margin-bottom: 1.5rem;
-                    border: 5px solid var(--primary-color);
-                    transition: border-color 0.3s ease;
-                }
-                .card h3 {
-                    margin: 0.5rem 0;
-                    color: var(--primary-color);
-                    font-size: 1.5rem;
-                    font-weight: 700;
-                    transition: color 0.3s ease;
-                }
-                .card p {
-                    margin: 0;
-                    color: var(--text-color);
-                    opacity: 0.8;
-                    font-size: 1rem;
-                    transition: color 0.3s ease;
-                }
-            </style>
-            <div class="card">
-                <img src="${this.getAttribute('image')}" alt="${this.getAttribute('name')}">
-                <h3>${this.getAttribute('name')}</h3>
-                <p>${this.getAttribute('role')}</p>
-            </div>
-        `;
-
-        shadow.appendChild(template.content.cloneNode(true));
-    }
-}
-
-customElements.define('member-card', MemberCard);
-
-// Add scroll animations and theme toggle
+// 스크롤 애니메이션 및 테마 토글
 document.addEventListener('DOMContentLoaded', () => {
-    // Scroll animations
+    // 섹션 나타나기 애니메이션
     const sections = document.querySelectorAll('section');
+    
+    const observerOptions = {
+        threshold: 0.2
+    };
 
-    const observer = new IntersectionObserver(entries => {
+    const sectionObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
             }
         });
-    }, { threshold: 0.1 });
+    }, observerOptions);
 
     sections.forEach(section => {
-        observer.observe(section);
+        sectionObserver.observe(section);
     });
 
-    // Theme toggle logic
+    // 테마 토글 로직
     const themeToggle = document.getElementById('theme-toggle');
     const body = document.body;
 
-    // Check for saved theme
+    // 저장된 테마 불러오기
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
         body.classList.add('dark-mode');
@@ -97,6 +39,18 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             localStorage.setItem('theme', 'light');
             themeToggle.textContent = '🌙';
+        }
+    });
+
+    // 헤더 스크롤 효과
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.style.padding = '0.5rem 0';
+            header.style.boxShadow = '0 10px 15px -3px rgb(0 0 0 / 0.1)';
+        } else {
+            header.style.padding = '1rem 0';
+            header.style.boxShadow = 'var(--shadow)';
         }
     });
 });

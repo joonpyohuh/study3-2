@@ -1,24 +1,22 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>b-cube | 아주대학교 경영인텔리전스학과 소학회</title>
+    <title>허준표 | 포트폴리오</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <nav>
             <div class="logo">
-                <a href="#">b-cube</a>
+                <a href="#">JUNPYO.</a>
             </div>
             <ul>
                 <li><a href="#about">About</a></li>
-                <li><a href="#activities">Activities</a></li>
-                <li><a href="#members">Members</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
+                <li><a href="#info">Info</a></li>
+                <li><a href="#interests">Interests</a></li>
+                <li><button class="theme-toggle" id="theme-toggle" aria-label="다크 모드 전환">🌙</button></li>
             </ul>
         </nav>
     </header>
@@ -26,69 +24,79 @@
     <main>
         <section id="hero">
             <div class="hero-content">
-                <h1 class="fade-in-down">b-cube</h1>
-                <p class="fade-in-down" style="animation-delay: 0.5s;">아주대학교 경영인텔리전스학과 소학회</p>
-                <a href="#about" class="cta-button fade-in-up">더 알아보기</a>
+                <h1 class="fade-in-down">안녕하세요, <br><span class="highlight">허준표</span>입니다.</h1>
+                <p class="fade-in-down" style="animation-delay: 0.5s;">꿈을 향해 나아가는 아주대학교 학생</p>
+                <div class="scroll-indicator fade-in-up" style="animation-delay: 1s;">
+                    <span>SCROLL DOWN</span>
+                    <div class="mouse"></div>
+                </div>
             </div>
         </section>
 
         <section id="about" class="hidden">
-            <h2>About Us</h2>
-            <p>b-cube는 Business Intelligence, Big Data, Business Analytics 분야에 대한 학습과 연구를 통해 미래의 데이터 전문가를 양성하는 것을 목표로 합니다.</p>
-        </section>
-
-        <section id="activities" class="hidden">
-            <h2>Activities</h2>
-            <ul>
-                <li>정기 스터디 및 워크숍</li>
-                <li>데이터 분석 프로젝트</li>
-                <li>기업 연계 실무 경험</li>
-                <li>OB/YB 네트워킹</li>
-            </ul>
-        </section>
-
-        <section id="members" class="hidden">
-            <h2>Members</h2>
-            <div class="member-cards">
-                <member-card name="성하솔" role="회장" image="https://via.placeholder.com/150"></member-card>
-                <member-card name="김민채" role="부회장" image="https://via.placeholder.com/150"></member-card>
-                <member-card name="이영희" role="총무" image="https://via.placeholder.com/150"></member-card>
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>저는 아주대학교에서 새로운 가치를 만들어가는 학생입니다. 끊임없이 배우고 성장하는 것을 즐기며, 데이터와 기술을 통해 세상을 더 나은 곳으로 만들고자 합니다.</p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">University</span>
+                            <span class="stat-value">아주대학교</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Major</span>
+                            <span class="stat-value">경영인텔리전스학과</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="contact" class="hidden">
-            <h2>Contact Us</h2>
-            <p>b-cube에 대한 문의나 제휴 제안은 아래 폼을 통해 남겨주세요.</p>
-            <div class="form-container">
-                <form action="https://formspree.io/f/xwvnjdva" method="POST" class="contact-form">
-                    <div class="form-group">
-                        <label for="name">이름 / 단체명</label>
-                        <input type="text" id="name" name="name" required placeholder="홍길동">
+        <section id="info" class="hidden">
+            <div class="container">
+                <h2>Profile</h2>
+                <div class="info-cards">
+                    <div class="info-card">
+                        <h3>학번</h3>
+                        <p>202321242</p>
                     </div>
-                    <div class="form-group">
-                        <label for="email">이메일 주소</label>
-                        <input type="email" id="email" name="_replyto" required placeholder="example@email.com">
+                    <div class="info-card">
+                        <h3>생년월일</h3>
+                        <p>2003년 04월 05일</p>
                     </div>
-                    <div class="form-group">
-                        <label for="subject">문의 유형</label>
-                        <select id="subject" name="subject">
-                            <option value="partnership">제휴 문의</option>
-                            <option value="recruitment">가입 문의</option>
-                            <option value="general">일반 문의</option>
-                        </select>
+                    <div class="info-card">
+                        <h3>소속</h3>
+                        <p>아주대학교</p>
                     </div>
-                    <div class="form-group">
-                        <label for="message">메시지</label>
-                        <textarea id="message" name="message" rows="5" required placeholder="문의 내용을 입력해주세요."></textarea>
+                </div>
+            </div>
+        </section>
+
+        <section id="interests" class="hidden">
+            <div class="container">
+                <h2>Interests</h2>
+                <div class="interests-grid">
+                    <div class="interest-item lol">
+                        <div class="icon">🎮</div>
+                        <h3>League of Legends</h3>
+                        <p>전략적인 팀 플레이와 긴장감 넘치는 승부를 즐깁니다. 협곡에서의 승리를 위해 항상 연구합니다.</p>
                     </div>
-                    <button type="submit" class="cta-button">보내기</button>
-                </form>
+                    <div class="interest-item baseball">
+                        <div class="icon">⚾</div>
+                        <h3>Baseball</h3>
+                        <p>열정적인 응원과 정교한 데이터의 스포츠, 야구를 사랑합니다. 직관을 통해 스트레스를 해소합니다.</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 b-cube. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2024 Heo Junpyo. All rights reserved.</p>
+        </div>
     </footer>
 
     <script src="main.js"></script>
