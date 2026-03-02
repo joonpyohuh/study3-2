@@ -58,8 +58,32 @@
 
         <section id="contact" class="hidden">
             <h2>Contact Us</h2>
-            <p>b-cube에 대한 문의나 가입 신청은 아래 이메일로 연락주세요.</p>
-            <a href="mailto:bcube.ajou@gmail.com">bcube.ajou@gmail.com</a>
+            <p>b-cube에 대한 문의나 제휴 제안은 아래 폼을 통해 남겨주세요.</p>
+            <div class="form-container">
+                <form action="https://formspree.io/f/xwvnjdva" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">이름 / 단체명</label>
+                        <input type="text" id="name" name="name" required placeholder="홍길동">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">이메일 주소</label>
+                        <input type="email" id="email" name="_replyto" required placeholder="example@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">문의 유형</label>
+                        <select id="subject" name="subject">
+                            <option value="partnership">제휴 문의</option>
+                            <option value="recruitment">가입 문의</option>
+                            <option value="general">일반 문의</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">메시지</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="문의 내용을 입력해주세요."></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">보내기</button>
+                </form>
+            </div>
         </section>
     </main>
 
