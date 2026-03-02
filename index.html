@@ -91,6 +91,27 @@
                 </div>
             </div>
         </section>
+
+        <section id="guestbook" class="hidden">
+            <div class="container">
+                <h2>Guestbook</h2>
+                <p class="section-desc">AI가 당신의 메시지에서 감정을 읽어냅니다.</p>
+                <div class="guestbook-wrapper">
+                    <form id="guestbook-form" class="guestbook-form">
+                        <div class="input-group">
+                            <input type="text" id="visitor-name" placeholder="이름" required>
+                        </div>
+                        <div class="input-group">
+                            <textarea id="visitor-message" placeholder="메시지를 남겨주세요... (AI 감정 분석 가동!)" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="cta-button">메시지 남기기</button>
+                    </form>
+                    <div id="guestbook-list" class="guestbook-list">
+                        <!-- 방명록 아이템이 여기에 실시간으로 추가됩니다 -->
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>

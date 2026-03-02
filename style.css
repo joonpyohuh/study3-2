@@ -316,6 +316,111 @@ h2::before {
     margin-bottom: 1.5rem;
 }
 
+/* Guestbook Section */
+.section-desc {
+    text-align: center;
+    margin-top: -3rem;
+    margin-bottom: 3rem;
+    opacity: 0.7;
+    font-size: 1.1rem;
+}
+
+.guestbook-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.guestbook-form {
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 100px;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group input, 
+.input-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 0.8rem;
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+body.dark-mode .input-group input,
+body.dark-mode .input-group textarea {
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.guestbook-form .cta-button {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+.guestbook-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.guestbook-item {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 1.2rem;
+    box-shadow: var(--shadow);
+    animation: fadeInUp 0.5s ease forwards;
+    border-left: 5px solid var(--primary-color);
+}
+
+.guestbook-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8rem;
+}
+
+.guestbook-name {
+    font-weight: 700;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sentiment-emoji {
+    font-size: 1.3rem;
+}
+
+.guestbook-date {
+    font-size: 0.8rem;
+    opacity: 0.5;
+}
+
+.guestbook-message {
+    font-size: 1rem;
+    opacity: 0.9;
+    white-space: pre-wrap;
+}
+
 /* Animations */
 .hidden {
     opacity: 0;
