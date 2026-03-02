@@ -263,9 +263,10 @@ section h2::after {
 
 footer {
     background-color: var(--primary-color);
-    color: var(--white-color);
+    color: #ffffff;
     text-align: center;
     padding: 1.5rem 0;
+    transition: background-color 0.3s ease;
 }
 
 /* Animations */
