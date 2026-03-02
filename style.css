@@ -316,6 +316,20 @@ h2::before {
     margin-bottom: 1.5rem;
 }
 
+/* Market Section */
+.market-widget-wrapper {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 2rem;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+body.dark-mode .tradingview-widget-container {
+    filter: invert(0) hue-rotate(0deg) brightness(1.2);
+}
+
 /* Guestbook Section */
 .section-desc {
     text-align: center;
